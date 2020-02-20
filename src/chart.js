@@ -36,6 +36,16 @@ export default function Chart(props){
                 }
                 return survey
             })
+
+            const sorted = surveys.sort((a,b) => {
+                if(a.date > b.date){
+                    return 1
+                }else{
+                    return -1
+                }
+            })
+
+
             setSurveys(surveys)
         })
         return unsub
